@@ -7,13 +7,13 @@ import ProductDetails from './pages/ProductDetail/ProductDetail';
 import Users from './pages/Users/Users';
 import AutoLogout from './components/AutoLogout/AutoLogout';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 
 
 const App: React.FC = () => {
   return (
     <Router>
-      
         <Routes>  
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
@@ -24,7 +24,7 @@ const App: React.FC = () => {
             <Route path="/products/create/:id" element={<ProductForm />} />
             <Route path="/users" element={<Users />} />
           </Route>
-          <Route path="*" element={<div>404 Not Found</div>} />
+          <Route  path="*" element={<NotFoundPage />} />
         </Routes>
     </Router>
   );
