@@ -1,0 +1,62 @@
+// Product.module.scss
+
+@import ../../assets/sass/modules/_colors
+
+.container
+  max-width: 800px
+  margin: 0 auto
+  padding: 20px
+  background-color: #f8f9fa
+  border-radius: 8px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  text-align: center
+
+  // Asegura que el contenedor nunca sea más ancho que la pantalla
+  width: 100%
+  box-sizing: border-box
+
+.title
+  font-size: 2rem
+  color: #343a40
+  margin-bottom: 15px
+
+.image
+  max-width: 100% // La imagen nunca será más ancha que su contenedor
+  height: auto // Mantiene la proporción de la imagen
+  border-radius: 8px
+  margin-bottom: 15px
+
+  // Limita la altura máxima de la imagen para evitar que ocupe demasiado espacio
+  max-height: 400px
+  object-fit: cover // Ajusta la imagen si es más alta que el contenedor
+
+.description
+  font-size: 1rem
+  color: #6c757d
+  margin-bottom: 15px
+
+.price
+  font-size: 1.5rem
+  color: #28a745
+  font-weight: bold
+  margin-bottom: 20px
+
+.button
+  padding: 10px 20px
+  background-color: #007bff
+  color: white
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  font-size: 1rem
+  transition: background-color 0.3s ease
+
+  &:hover
+    background-color: #0056b3
+
+.delete
+  background-color: $error-color
+
+.buttons
+  display: flex
+  gap: 1rem

@@ -1,0 +1,73 @@
+@import '../../assets/sass/modules/_colors'
+@import '../../assets/sass/modules/_variables'
+
+.appContainer
+  display: flex
+  flex-direction: column
+  height: 100vh
+
+.header
+  background-color: $primary-color
+  height: $header-height
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 $content-padding
+
+  .logo
+    color: #fff
+    font-size: 1.5rem
+    font-weight: bold
+
+  .userMenu
+    color: #fff
+
+.sidebar
+  background-color: $secondary-color
+  width: $sidebar-width
+  height: 100%
+  position: fixed
+  top: $header-height
+  left: 0
+  padding: $content-padding
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+
+  .navItem
+    color: #fff
+    padding: 10px 0
+    text-decoration: none
+
+    &:hover
+      background-color: lighten($secondary-color, 10%)
+      border-radius: 4px
+      padding-left: 10px
+
+.mainContent
+  margin-left: $sidebar-width
+  padding: $content-padding
+  min-height: calc(100vh - $header-height - $footer-height)
+  background-color: $background-color
+  position: relative
+  overflow: scroll
+
+  .contentWrapper
+    background-color: #fff
+    padding: $content-padding
+    border-radius: 8px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+    position: absolute
+    height: calc(100% - 100px - $content-padding)
+    width: calc(100% - 60px - $content-padding)
+
+.footer
+  background-color: darken($background-color, 5%)
+  height: $footer-height
+  display: flex
+  justify-content: center
+  align-items: center
+  color: $text-secondary-color
+  position: fixed
+  bottom: 0
+  width: 100%
